@@ -1,0 +1,102 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "6398b8555149f45d305fe0515b856c67",
+    "entities": [
+      {
+        "tableName": "Student",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name_std` TEXT, `key_std` TEXT NOT NULL, `email_std` TEXT, `password_std` TEXT, `country_std` TEXT, PRIMARY KEY(`key_std`))",
+        "fields": [
+          {
+            "fieldPath": "nameStd",
+            "columnName": "name_std",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "keyStd",
+            "columnName": "key_std",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "emailStd",
+            "columnName": "email_std",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "passwordStd",
+            "columnName": "password_std",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryStd",
+            "columnName": "country_std",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "key_std"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Restaurants",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`key_Res` TEXT NOT NULL, `password_Res` TEXT, `email_Res` TEXT, `country_Res` TEXT, `name_Res` TEXT, PRIMARY KEY(`key_Res`))",
+        "fields": [
+          {
+            "fieldPath": "keyRes",
+            "columnName": "key_Res",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "passwordRes",
+            "columnName": "password_Res",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "emailRes",
+            "columnName": "email_Res",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryRes",
+            "columnName": "country_Res",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nameRes",
+            "columnName": "name_Res",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "key_Res"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6398b8555149f45d305fe0515b856c67')"
+    ]
+  }
+}

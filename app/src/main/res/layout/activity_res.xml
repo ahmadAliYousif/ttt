@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ResActivity">
+
+    <Spinner
+        android:id="@+id/res_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp" />
+
+<!--    <Button-->
+<!--        android:id="@+id/res_btm_send_req"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="30dp"-->
+<!--        android:text="send req" />-->
+
+    <Button
+        android:id="@+id/res_btn_sign_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="sign out" />
+
+    <Button
+        android:id="@+id/res_btm_delete_req_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="remove requset " />
+
+    <ListView
+        android:id="@+id/res_std_list"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
